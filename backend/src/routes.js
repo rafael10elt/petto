@@ -1,11 +1,22 @@
 const express = require('express');
+const abrigoController = require('./controllers/abrigoController');
+const petController = require('./controllers/petController');
+const profileController = require('./controllers/profileController');
+const sessionController = require('./controllers/sessionController');
+
+
 const routes = express.Router();
 
-module.exports = routes;
 
-routes.get('/', (req, res) => {
-    return res.json({
-        name: 'rafa',
-        idade: 31,
-    });
-});
+routes.get('/profile', profileController.index);
+
+routes.post('/session', sessionController.create);
+
+routes.get('/abrigos', abrigoController.index);
+routes.post('/abrigos', abrigoController.create);
+
+routes.get('/pets', petController.index);
+routes.post('/pets', petController.create);
+routes.delete('/pets/:id', petController.delete);
+
+module.exports = routes;

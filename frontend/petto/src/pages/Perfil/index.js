@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.css';
 
-export default function EditarPet() {
+export default function Perfil() {
     return (
-        <h1>Editar Pet</h1>
+        <h1>Perfil do abrigo</h1>
     );
 }

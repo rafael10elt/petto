@@ -5,6 +5,8 @@ const app = express();
 
 app.use(express.json());
 app.use(routes);
+
+//Inicializando o servidor e definindo a porta.
 const porta = 3333;
 
 app.listen(porta, function () {

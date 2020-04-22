@@ -1,4 +1,7 @@
 const express = require('express');
+/**
+ * Importando os controllers
+ */
 const abrigoController = require('./controllers/abrigoController');
 const petController = require('./controllers/petController');
 const profileController = require('./controllers/profileController');
@@ -7,7 +10,7 @@ const sessionController = require('./controllers/sessionController');
 
 const routes = express.Router();
 
-
+//Definindo as todas das páginas
 routes.get('/profile', profileController.index);
 
 routes.post('/session', sessionController.create);

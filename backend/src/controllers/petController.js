@@ -1,6 +1,7 @@
 const connection = require('../database/connection');
 
 module.exports = {
+    //Definindo o método para listar todos os pets e seu respectivo abrigo
     async index(req, res) {
         const { page = 1 } = req.query;
 
@@ -19,6 +20,7 @@ module.exports = {
 
         return res.json(pets);
     },
+    //Definindo o método create para registar um novo pet
     async create(req, res) {
         const { pet_nome, sexo, idade, tipo } = req.body;
         const abrigo_id = req.headers.authorization;
@@ -32,6 +34,7 @@ module.exports = {
         });
         return res.json({ id });
     },
+    //Definindo o método delete para apagar um pet especifico
     async delete(req, res) {
         const { id } = req.params;
         const abrigo_id = req.headers.authorization;
@@ -49,6 +52,7 @@ module.exports = {
 
         return res.status(204).send();
     },
+    //Definindo o método update para editar as informações de um pet especifico
     async update(req, res) {
         const { id } = req.params;
         const abrigo_id = req.headers.authorization;

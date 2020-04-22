@@ -1,4 +1,4 @@
-
+//Criando as tabelas e definindo as caracteristicas das colunas
 exports.up = function (knex) {
     return knex.schema.createTable('pets', function (table) {
         table.increments();
@@ -14,7 +14,7 @@ exports.up = function (knex) {
         // table.string('castrado').notNullable();
     })
 };
-
+//Função rollback
 exports.down = function (knex) {
     return knex.schema.dropTable('pets');
 };

@@ -1,4 +1,4 @@
-
+//Criando as tabelas e definindo as caracteristicas das colunas
 exports.up = function (knex) {
     return knex.schema.createTable('abrigos', function (table) {
         table.string('id').primary();
@@ -10,6 +10,7 @@ exports.up = function (knex) {
     });
 };
 
+//Função rollback
 exports.down = function (knex) {
     return knex.schema.dropTable('abrigos');
 };

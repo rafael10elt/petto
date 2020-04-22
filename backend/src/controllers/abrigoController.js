@@ -1,12 +1,15 @@
+
 const crypto = require('crypto');
 const connection = require('../database/connection');
 
 module.exports = {
+    //Definindo o método para listar todos os abrigos
     async index(req, res) {
         const abrigos = await connection('abrigos').select('*');
 
         return res.json(abrigos);
     },
+    //Definindo o método criar para registrar um novo abrigo
     async create(req, res) {
         const { abrigo_nome, email, whatsapp, localidade, uf } = req.body;
 
@@ -22,6 +25,7 @@ module.exports = {
         })
         return res.json({ id });
     },
+    //Definindo o método editar as informações de um abrigo especifico
     async update(req, res) {
         const { id } = req.params;
         const abrigo_id = req.headers.authorization;

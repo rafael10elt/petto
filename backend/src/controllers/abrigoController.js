@@ -8,13 +8,13 @@ module.exports = {
         return res.json(abrigos);
     },
     async create(req, res) {
-        const { nome, email, whatsapp, localidade, uf } = req.body;
+        const { abrigo_nome, email, whatsapp, localidade, uf } = req.body;
 
         const id = crypto.randomBytes(8).toString('HEX');
 
         await connection('abrigos').insert({
             id,
-            nome,
+            abrigo_nome,
             email,
             whatsapp,
             localidade,

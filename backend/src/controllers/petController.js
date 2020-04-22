@@ -3,7 +3,6 @@ const connection = require('../database/connection');
 module.exports = {
     async index(req, res) {
         const { page = 1 } = req.query;
-        const [count] = await connection('pets').count();
 
         const pets = await connection('pets')
             .join('abrigos', 'abrigos.id', '=', 'pets.abrigo_id')
@@ -11,23 +10,21 @@ module.exports = {
             .offset((page - 1) * 5)
             .select([
                 'pets.*',
-                'abrigos.nome',
+                'abrigos.abrigo_nome',
                 'abrigos.email',
                 'abrigos.whatsapp',
                 'abrigos.localidade',
                 'abrigos.uf'
             ]);
 
-        res.headers('X-Total-Count', count['count(*)'])
-
         return res.json(pets);
     },
     async create(req, res) {
-        const { nome, sexo, idade, tipo } = req.body;
+        const { pet_nome, sexo, idade, tipo } = req.body;
         const abrigo_id = req.headers.authorization;
 
         const { id } = await connection('pets').insert({
-            nome,
+            pet_nome,
             sexo,
             idade,
             tipo,

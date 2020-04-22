@@ -2,7 +2,7 @@
 exports.up = function (knex) {
     return knex.schema.createTable('pets', function (table) {
         table.increments();
-        table.string('nome').notNullable();
+        table.string('pet_nome').notNullable();
         table.string('sexo').notNullable();
         table.string('idade').notNullable();
         table.string('tipo').notNullable();

@@ -2,7 +2,7 @@
 exports.up = function (knex) {
     return knex.schema.createTable('abrigos', function (table) {
         table.string('id').primary();
-        table.string('nome').notNullable();
+        table.string('abrigo_nome').notNullable();
         table.string('email').notNullable();
         table.string('whatsapp').notNullable();
         table.string('localidade').notNullable();

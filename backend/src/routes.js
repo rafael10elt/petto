@@ -14,6 +14,7 @@ routes.post('/session', sessionController.create);
 
 routes.get('/abrigos', abrigoController.index);
 routes.post('/abrigos', abrigoController.create);
+routes.put('/abrigos/:id', abrigoController.update);
 
 routes.get('/pets', petController.index);
 routes.post('/pets', petController.create);

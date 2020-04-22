@@ -21,5 +21,26 @@ module.exports = {
             uf,
         })
         return res.json({ id });
+    },
+    async update(req, res) {
+        const { id } = req.params;
+        const abrigo_id = req.headers.authorization;
+        const abrigos = await connection('abrigos')
+            .where('id', id)
+            .select('id')
+            .first();
+
+        if (abrigos.id !== abrigo_id) {
+            return res.status(401).json({ error: 'Operation not permitted.' });
+
+        }
+        await connection('abrigos').where('id', id).update({
+            abrigo_nome: req.body.abrigo_nome,
+            email: req.body.email,
+            whatsapp: req.body.whatsapp,
+            localidade: req.body.localidade,
+            uf: req.body.uf
+        });
+        return res.status(204).send();
     }
 };

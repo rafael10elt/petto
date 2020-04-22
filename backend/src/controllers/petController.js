@@ -48,5 +48,25 @@ module.exports = {
         await connection('pets').where('id', id).delete();
 
         return res.status(204).send();
+    },
+    async update(req, res) {
+        const { id } = req.params;
+        const abrigo_id = req.headers.authorization;
+        const pets = await connection('pets')
+            .where('id', id)
+            .select('abrigo_id')
+            .first();
+
+        if (pets.abrigo_id !== abrigo_id) {
+            return res.status(401).json({ error: 'Operation not permitted.' });
+
+        }
+        await connection('pets').where('id', id).update({
+            pet_nome: req.body.pet_nome,
+            sexo: req.body.sexo,
+            idade: req.body.idade,
+            tipo: req.body.tipo,
+        });
+        return res.status(204).send();
     }
 };

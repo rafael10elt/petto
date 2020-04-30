@@ -1,54 +1,75 @@
-.home-container{
-    width: 100%;
-    max-width: 1120px;
-    margin: 0 auto;  
-    background: #ffffff;
+.home-container-home{
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+  margin: 130px auto;
+  overflow: hidden;
+  width: 750px;
+}
+.home-container-home header{
+  background-size: cover;
+  height: 100px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: inline-block;
+  
+}
+.home-container-home header img{
+  width: 100px;  
+  margin-left: 42px;
+}
+.home-container-home header h1{
+  color: black;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 10px 3px;
+	
+}
+.content-home{
+  padding: 32px;
+  background: #ffffff;
+}
 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.content-home img{
+   width: 450px;
+   margin-left: 120px;
 }
-.home-container header{
-    width: 100%;    
-    display: inline-flex;
-    padding: 20px 20px;
-        
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;	
 }
-.home-container header img{
-width: 150px;
-height: auto;
-margin-left: 180px;
+
+#button1{
+  font: 400 18px Roboto, sans-serif;
+  border-radius: 12px;
+  color: #fff;
+  width: 170px;
+  height: 70px;
+  font-size: 20px;
+  cursor: pointer;
+  background: blue;
+  margin-left: 100px;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
 }
-.home-container header h1{
-    margin-top: 30px;
-    font-size: 50px;
-    margin-left: 10px;
+
+
+#button2{
+ font: 400 18px Roboto, sans-serif;
+ border-radius: 12px;
+ color: #fff;
+ width: 170px;
+ height: 70px;
+ font-size: 20px;
+ cursor: pointer;
+ background: green;
+ margin-right: 100px;
+ box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
 }
-.content{
- margin-left: 210px;  
-}
-.content img{
-    width: 680px; 
-     
-}
-.home-container section button {
-    width: 300px;
-    height: 60px;
-    background: #f88500;    
-    border: 0;
-    border-radius: 8px;
-    color: #fff;
-    font-weight: 700;
-    margin-top: 10px;
-    display: inline-block;
-    justify-content: space-between;
-    text-align: center;
-    text-decoration: none;
-    font-size: 28px;
-    margin-right: 90px;
-    line-height: 60px;
-    transition: filter 0.2s;
-}
-.button:hover{
-    filter: brightness(90%);
+.content-home button:hover {
+ border: 2px solid #2f3676;
+ background: #f2f2f2;
+ color: #000;
+ 
 }

@@ -20,15 +20,15 @@ export default function EditarPet() {
                         <h1>Sexo</h1>
                         <div className="radios">
                             <label>
-                                <input type="radio" value="macho" name="sexo" checked="true" />
-                                Macho
+                                <input type="radio" value="masculino" name="sexo" checked="true" />
+                                Masculino
                                 <span class="checkmark"></span>
                             </label>
                         </div>
                         <div className="radios">
                             <label>
-                                <input type="radio" value="femea" name="sexo" />
-                                Fêmea
+                                <input type="radio" value="feminino" name="sexo" />
+                                Feminino
                                 <span class="checkmark"></span>
                             </label>
                         </div>

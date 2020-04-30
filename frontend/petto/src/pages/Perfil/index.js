@@ -23,7 +23,7 @@ export default function Perfil() {
                         <div >
                             <Link to="/pet/registrar">
                                 <button id="buttonnp">
-                                    <FiPlus size={18} color="#fffff" />Cadastrar Novo</button>
+                                    <FiPlus size={18} color="#fffff" />Cadastrar Novo Pet</button>
                             </Link>
                         </div>
                     </section>
@@ -32,21 +32,17 @@ export default function Perfil() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -65,9 +61,7 @@ export default function Perfil() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -82,21 +76,17 @@ export default function Perfil() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -115,9 +105,52 @@ export default function Perfil() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
+                                    <strong id="linha3">UF:</strong>
+                                    <p>PE</p>
                                 </div>
+                            </div>
+                            <button type="button" title="Editar">
+                                <FiEdit size={30} color="#a8a8b3" />
+                            </button>
+                            <button type="button" title="Apagar">
+                                <FiTrash2 size={30} color="#a8a8b3" />
+                            </button>
+                        </li>
+
+                        <li>
+                            <div className="sort">
                                 <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong>Nome:</strong>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
+                                </div>
+                            </div>
+                            <div className="sort">
+                                <div className="line">
+                                    <strong>Tipo:</strong>
+                                    <p>Cachorro</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
+                                </div>
+                            </div>
+                            <div className="sort2">
+                                <strong>Nome do abrigo:</strong>
+                                <p>Nanda abrigo</p>
+                            </div>
+                            <div className="sort2">
+                                <strong>Email:</strong>
+                                <p>nandabrigo@abrigo.com</p>
+                            </div>
+                            <div className="sort2">
+                                <strong>Whatsapp:</strong>
+                                <p>81 947893</p>
+                            </div>
+                            <div className="sort">
+                                <div className="line">
+                                    <strong>Localidade:</strong>
+                                    <p>Recife</p>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -132,21 +165,17 @@ export default function Perfil() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -165,9 +194,7 @@ export default function Perfil() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -178,25 +205,22 @@ export default function Perfil() {
                                 <FiTrash2 size={30} color="#a8a8b3" />
                             </button>
                         </li>
+
                         <li>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -215,9 +239,7 @@ export default function Perfil() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -228,25 +250,22 @@ export default function Perfil() {
                                 <FiTrash2 size={30} color="#a8a8b3" />
                             </button>
                         </li>
+
                         <li>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -265,9 +284,7 @@ export default function Perfil() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -278,25 +295,22 @@ export default function Perfil() {
                                 <FiTrash2 size={30} color="#a8a8b3" />
                             </button>
                         </li>
+
                         <li>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -315,9 +329,7 @@ export default function Perfil() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -328,25 +340,22 @@ export default function Perfil() {
                                 <FiTrash2 size={30} color="#a8a8b3" />
                             </button>
                         </li>
+
                         <li>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -365,9 +374,7 @@ export default function Perfil() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -378,6 +385,52 @@ export default function Perfil() {
                                 <FiTrash2 size={30} color="#a8a8b3" />
                             </button>
                         </li>
+
+                        <li>
+                            <div className="sort">
+                                <div className="line">
+                                    <strong>Nome:</strong>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
+                                </div>
+                            </div>
+                            <div className="sort">
+                                <div className="line">
+                                    <strong>Tipo:</strong>
+                                    <p>Cachorro</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
+                                </div>
+                            </div>
+                            <div className="sort2">
+                                <strong>Nome do abrigo:</strong>
+                                <p>Nanda abrigo</p>
+                            </div>
+                            <div className="sort2">
+                                <strong>Email:</strong>
+                                <p>nandabrigo@abrigo.com</p>
+                            </div>
+                            <div className="sort2">
+                                <strong>Whatsapp:</strong>
+                                <p>81 947893</p>
+                            </div>
+                            <div className="sort">
+                                <div className="line">
+                                    <strong>Localidade:</strong>
+                                    <p>Recife</p>
+                                    <strong id="linha3">UF:</strong>
+                                    <p>PE</p>
+                                </div>
+                            </div>
+                            <button type="button" title="Editar">
+                                <FiEdit size={30} color="#a8a8b3" />
+                            </button>
+                            <button type="button" title="Apagar">
+                                <FiTrash2 size={30} color="#a8a8b3" />
+                            </button>
+                        </li>
+
                     </ul>
                 </div>
             </div>

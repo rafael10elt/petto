@@ -71,7 +71,7 @@
  font: 400 18px Roboto, sans-serif;
  border-radius: 12px;
  color: #fff;
- width: 170px;
+ width: 200px;
  height: 45px;
  font-size: 18px;
  cursor: pointer;
@@ -103,10 +103,11 @@
     display: block;
     margin-bottom: 16px;
     color: #41414d;
-    font-size: 18px;;
+    font-size: 18px;
+    margin-left: 25px;
 }
 .sort{
-    /* display: inline-block;     */
+    display: inline-flex;    
 }
 .sort2{
     display: flex;
@@ -119,10 +120,19 @@
 .line{
     display: flex;
 }
-.line p{
-    margin-left: 5px;
+#linha1{    
+    margin-left: 81px;
     margin-top: 1px;
 }
+#linha2{    
+    margin-left: 78px;
+    margin-top: 1px;
+}
+#linha3{    
+    margin-left:50px;
+    margin-top: 1px;
+}
+
 .content-pets ul li p + strong {
     margin-top: 32px;
 }
@@ -131,7 +141,16 @@
     top: 24px;
     border: 0;
     background-color: #fff;
-    margin-right: 20px;
+    margin-left: 160px;
+    margin-top: 10px;
+}
+.content-pets ul li button + button{
+    right: 24px;
+    top: 24px;
+    border: 0;
+    background-color: #fff;
+    margin-left: 30px;
+    
 }
 .content-pets ul li button:hover{
     opacity: 0.8;

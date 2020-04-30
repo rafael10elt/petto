@@ -25,21 +25,17 @@ export default function Pets() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -58,9 +54,7 @@ export default function Pets() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -69,21 +63,17 @@ export default function Pets() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -102,9 +92,7 @@ export default function Pets() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -113,21 +101,17 @@ export default function Pets() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -146,9 +130,7 @@ export default function Pets() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -157,21 +139,17 @@ export default function Pets() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -190,9 +168,7 @@ export default function Pets() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -201,21 +177,17 @@ export default function Pets() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -234,9 +206,7 @@ export default function Pets() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -245,21 +215,17 @@ export default function Pets() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -278,9 +244,7 @@ export default function Pets() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -289,21 +253,17 @@ export default function Pets() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -322,9 +282,7 @@ export default function Pets() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>
@@ -333,21 +291,17 @@ export default function Pets() {
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
+                                    <p>Alvinho</p>
+                                    <strong id="linha1">Idade:</strong>
+                                    <p>3 a 5 anos</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
                                     <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
+                                    <strong id="linha2">Sexo:</strong>
+                                    <p>Masculino</p>
                                 </div>
                             </div>
                             <div className="sort2">
@@ -366,185 +320,7 @@ export default function Pets() {
                                 <div className="line">
                                     <strong>Localidade:</strong>
                                     <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Belinha</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Idade:</strong>
-                                    <p>1 a 3 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                </div>
-                                <div className="line">
-                                    <strong>Sexo:</strong>
-                                    <p>Fêmea</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                </div>
-                                <div className="line">
-                                    <strong>UF:</strong>
+                                    <strong id="linha3">UF:</strong>
                                     <p>PE</p>
                                 </div>
                             </div>

@@ -1,77 +1,70 @@
-.home-container-home{
+.home-container-login{
   background-color: #f2f2f2;
   border-radius: 8px;
   box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
-  margin: 75px auto;
+  margin:75px auto;
   overflow: hidden;
   width: 750px;
-  height: 80vh;
+   height: 80vh;
 }
-.home-container-home header{
+.home-container-login header{
   background-size: cover;
   height: 100px;
   padding: 20px;
   width: 100%;
   display: flex;
   align-items: inline-block;
+  
 }
-.home-container-home header img{
+.home-container-login header img{
   width: 100px;  
-  margin-left: 55px;
+  margin-left: 42px;
 }
-.home-container-home header h1{
+.home-container-login header h1{
   color: black;
   font-size: 35px;
   font-weight: bold;
   margin: 10px 3px;	
 }
-#msg{
-  text-decoration: underline;
-  font-weight: bold;
-  margin-top: 30px;
-}
-.content-home{
+.content-login{
   padding: 32px;
   background: #ffffff;
+  
 }
-
-.content-home img{
-   width: 450px;
-   margin-left: 120px;
+.content-login h1{
+text-align: center;
+margin-bottom: 15px;
 }
-.buttons{
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;	
+.content-login input{
+    margin-bottom: 15px;
+    width: 380px;
+    margin-left: 150px;
 }
-
-#button1{
+#button3{
   font: 400 18px Roboto, sans-serif;
   border-radius: 12px;
   color: #fff;
   width: 170px;
   height: 70px;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
-  background: blue;
+  background: green;
   margin-left: 100px;
   box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
 }
-
-
-#button2{
+#button4{
  font: 400 18px Roboto, sans-serif;
  border-radius: 12px;
  color: #fff;
  width: 170px;
  height: 70px;
- font-size: 20px;
+ font-size: 22px;
  cursor: pointer;
- background: green;
+ background: red;
  margin-right: 100px;
  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
 }
-.content-home button:hover {
+.content-login button:hover {
  border: 2px solid #2f3676;
  background: #f2f2f2;
  color: #000;

@@ -3,6 +3,7 @@ import './styles.css';
 import '../../global.css'
 import Img_Logo from '../../assets/cat_dog_logo.png';
 import Img_Pets from '../../assets/cat_dog_circle.png';
+import { Link } from 'react-router-dom';
 
 export default function NovoPet() {
     return (
@@ -10,7 +11,7 @@ export default function NovoPet() {
             <div class="home-container-novoPet">
                 <header>
                     <img src={Img_Logo} />
-                    <h1>Petto - Adote seu melhor amigo</h1>
+                    <h1>Petto - Adoção de cães e gatos</h1>
                 </header>
                 <div class="content-novoPet">
                     <form>
@@ -59,9 +60,10 @@ export default function NovoPet() {
                             </select>
                         </section>
                         <div class="buttons">
-                            <button>Salvar</button>
-                            <button>Cancelar</button>
-                        </div>
+                            <button id="salvar">Salvar</button>
+                            <Link to="/">
+                                <button id="cancelar">Cancelar</button>
+                            </Link> </div>
                     </form>
                     <div>
                         <img src={Img_Pets} />

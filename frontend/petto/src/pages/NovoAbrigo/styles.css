@@ -2,10 +2,10 @@
 	background-color: #f2f2f2;
   border-radius: 8px;
   box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
-  margin: 180px auto;
+  margin: 75px auto;
   overflow: hidden;
   width: 750px;
-
+ height: 80vh;
 }
 .home-container-novoAbrigo header{
   background-size: cover;
@@ -82,7 +82,7 @@ section {
 	margin-top: 20px;
 }
 
-button{
+#salvar{
  font: 400 18px Roboto, sans-serif;
  border-radius: 12px;
  color: #fff;
@@ -94,7 +94,7 @@ button{
  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.1);
 }
 
-button + button{
+#cancelar{
  font: 400 18px Roboto, sans-serif;
  border-radius: 12px;
  color: #fff;
@@ -105,10 +105,14 @@ button + button{
  background: red;
  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.1);
 }
+#salvar, #cancelar {
+   box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+}
 .buttons{
 	display: flex;
 	justify-content: space-between;
-	margin-top: 10px;
+  margin-top: 10px;
+  
 }
 .content-novoAbrigo button:hover {
  border: 2px solid #2f3676;

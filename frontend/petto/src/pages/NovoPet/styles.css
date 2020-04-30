@@ -99,7 +99,7 @@ section {
 .radios input:checked ~ .checkmark {
   background-color: #2196F3;
 }
-.buttons button{
+#salvar{
  font: 400 18px Roboto, sans-serif;
  border-radius: 12px;
  color: #fff;
@@ -114,7 +114,7 @@ section {
    box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
 }
 
-.buttons button + button{
+#cancelar{
  font: 400 18px Roboto, sans-serif;
  border-radius: 12px;
  color: #fff;

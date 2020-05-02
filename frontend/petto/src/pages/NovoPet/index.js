@@ -89,7 +89,7 @@ export default function NovoPet() {
                             <option value="Menos de 3 meses"> Menos de 3 meses</option>
                             <option value="3 e 6 meses"> 3 a 6 meses</option>
                             <option value="7 meses a 1 ano"> 7 meses a 1 ano</option>
-                            <option value="1 a 3 ano"> 1 a 3 anos</option>
+                            <option value="1 a 3 anos"> 1 a 3 anos</option>
                             <option value="3 a 5 anos"> 3 a 5 anos</option>
                             <option value="+ de 5 anos"> + de 5 anos</option>
                         </select>

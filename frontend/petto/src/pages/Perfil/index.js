@@ -63,21 +63,24 @@ export default function Perfil() {
                 <ul>
                     {pets.map(pet => (
                         <li key={pet.id}>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>{pet.pet_nome}</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>{pet.idade}</p>
-                                </div>
+                            <div className="sort2">
+
+                                <strong>Nome:</strong>
+                                <p>{pet.pet_nome}</p>
                             </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>{pet.tipo}</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>{pet.sexo}</p>
-                                </div>
+                            <div className="sort2">
+                                <strong>Idade:</strong>
+                                <p>{pet.idade}</p>
+                            </div>
+                            <div className="sort2">
+
+                                <strong>Tipo:</strong>
+                                <p>{pet.tipo}</p>
+                            </div>
+                            <div className="sort2">
+                                <strong>Sexo:</strong>
+                                <p>{pet.sexo}</p>
+
                             </div>
                             <button type="button" title="Editar">
                                 <FiEdit size={30} color="#a8a8b3" />
@@ -89,6 +92,6 @@ export default function Perfil() {
                     ))}
                 </ul>
             </div>
-        </div>
+        </div >
     );
 }

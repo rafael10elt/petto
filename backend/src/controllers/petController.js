@@ -3,12 +3,12 @@ const connection = require('../database/connection');
 module.exports = {
     //Definindo o método para listar todos os pets e seu respectivo abrigo
     async index(req, res) {
-        const { page = 1 } = req.query;
+        // const { page = 1 } = req.query;
 
         const pets = await connection('pets')
             .join('abrigos', 'abrigos.id', '=', 'pets.abrigo_id')
-            .limit(5)
-            .offset((page - 1) * 5)
+            // .limit(5)
+            // .offset((page - 1) * 5)
             .select([
                 'pets.*',
                 'abrigos.abrigo_nome',

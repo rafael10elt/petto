@@ -19,7 +19,7 @@ export default function Login() {
 
             history.push('/abrigo/perfil');
         } catch (err) {
-            alert('Flha no Login, tente novamente.')
+            alert('Token Inválido.')
         }
     }
     return (

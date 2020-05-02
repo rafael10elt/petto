@@ -4,9 +4,9 @@ module.exports = {
     async create(req, res) {
         const { id } = req.body;
 
-        const abrigo = await connection('abrigo')
+        const abrigo = await connection('abrigos')
             .where('id', id)
-            .select('nome')
+            .select('abrigo_nome')
             .first();
 
         if (!abrigo) {

@@ -1,439 +1,94 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import '../../global.css'
-import Img_Main from '../../assets/cat_dog.png';
 import Img_Logo from '../../assets/cat_dog_logo.png';
 import { FiTrash2, FiPower, FiEdit, FiPlus } from 'react-icons/fi';
+import api from '../../services/api';
 
 export default function Perfil() {
+    const [pets, setPets] = useState([]);
+    const history = useHistory();
+
+    const abrigoId = localStorage.getItem('abrigoId');
+    const abrigoNome = localStorage.getItem('abrigoNome');
+
+    useEffect(() => {
+        api.get('profile', {
+            headers: {
+                Authorization: abrigoId,
+            }
+        }).then(response => {
+            setPets(response.data);
+        })
+    }, [abrigoId]);
+
+    async function handleDeletePet(id) {
+        try {
+            await api.delete(`pets/${id}`, {
+                headers: {
+                    Authorization: abrigoId,
+                }
+            });
+
+            setPets(pets.filter(pets => pets.id !== id));
+        } catch (err) {
+            alert('Erro ao tentar deletar o pet, tente novamente' + err);
+        }
+    }
+    function handleLogout() {
+        localStorage.clear();
+
+        history.push('/');
+    }
     return (
-        <body>
-            <div className="container-pets">
-                <header>
-                    <img src={Img_Logo} />
-                    <h1>Petto - Adoção de cães e gatos</h1>
-                </header>
-                <div className="content-pets">
-                    <section>
-                        <button type="button" id="btnsair">
-                            <FiPower size={20} color="#fffff" />Sair
+        <div className="container-pets">
+            <header>
+                <img src={Img_Logo} alt="logo" />
+                <h1>Petto - Adoção de cães e gatos</h1>
+            </header>
+            <div className="content-pets">
+                <section>
+                    <button onClick={handleLogout} type="button" id="btnsair">
+                        <FiPower size={20} color="#fffff" />Sair
                         </button>
-                        <span>Seja bem vindo, NOME DO ABRIGO</span>
-                        <div >
-                            <Link to="/pet/registrar">
-                                <button id="buttonnp">
-                                    <FiPlus size={18} color="#fffff" />Cadastrar Novo Pet</button>
-                            </Link>
-                        </div>
-                    </section>
-                    <ul>
-                        <li>
+                    <span>Seja bem vindo, {abrigoNome}</span>
+                    <div >
+                        <Link to="/pet/registrar">
+                            <button id="buttonnp">
+                                <FiPlus size={18} color="#fffff" />Cadastrar Novo Pet</button>
+                        </Link>
+                    </div>
+                </section>
+                <ul>
+                    {pets.map(pet => (
+                        <li key={pet.id}>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Nome:</strong>
-                                    <p>Alvinho</p>
+                                    <p>{pet.pet_nome}</p>
                                     <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
+                                    <p>{pet.idade}</p>
                                 </div>
                             </div>
                             <div className="sort">
                                 <div className="line">
                                     <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
+                                    <p>{pet.tipo}</p>
                                     <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
+                                    <p>{pet.sexo}</p>
                                 </div>
                             </div>
                             <button type="button" title="Editar">
                                 <FiEdit size={30} color="#a8a8b3" />
                             </button>
-                            <button type="button" title="Apagar">
+                            <button onClick={() => handleDeletePet(pet.id)} type="button" title="Apagar">
                                 <FiTrash2 size={30} color="#a8a8b3" />
                             </button>
                         </li>
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Alvinho</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                            <button type="button" title="Editar">
-                                <FiEdit size={30} color="#a8a8b3" />
-                            </button>
-                            <button type="button" title="Apagar">
-                                <FiTrash2 size={30} color="#a8a8b3" />
-                            </button>
-                        </li>
-
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Alvinho</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                            <button type="button" title="Editar">
-                                <FiEdit size={30} color="#a8a8b3" />
-                            </button>
-                            <button type="button" title="Apagar">
-                                <FiTrash2 size={30} color="#a8a8b3" />
-                            </button>
-                        </li>
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Alvinho</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                            <button type="button" title="Editar">
-                                <FiEdit size={30} color="#a8a8b3" />
-                            </button>
-                            <button type="button" title="Apagar">
-                                <FiTrash2 size={30} color="#a8a8b3" />
-                            </button>
-                        </li>
-
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Alvinho</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                            <button type="button" title="Editar">
-                                <FiEdit size={30} color="#a8a8b3" />
-                            </button>
-                            <button type="button" title="Apagar">
-                                <FiTrash2 size={30} color="#a8a8b3" />
-                            </button>
-                        </li>
-
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Alvinho</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                            <button type="button" title="Editar">
-                                <FiEdit size={30} color="#a8a8b3" />
-                            </button>
-                            <button type="button" title="Apagar">
-                                <FiTrash2 size={30} color="#a8a8b3" />
-                            </button>
-                        </li>
-
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Alvinho</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                            <button type="button" title="Editar">
-                                <FiEdit size={30} color="#a8a8b3" />
-                            </button>
-                            <button type="button" title="Apagar">
-                                <FiTrash2 size={30} color="#a8a8b3" />
-                            </button>
-                        </li>
-
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Alvinho</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                            <button type="button" title="Editar">
-                                <FiEdit size={30} color="#a8a8b3" />
-                            </button>
-                            <button type="button" title="Apagar">
-                                <FiTrash2 size={30} color="#a8a8b3" />
-                            </button>
-                        </li>
-
-                        <li>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Nome:</strong>
-                                    <p>Alvinho</p>
-                                    <strong id="linha1">Idade:</strong>
-                                    <p>3 a 5 anos</p>
-                                </div>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Tipo:</strong>
-                                    <p>Cachorro</p>
-                                    <strong id="linha2">Sexo:</strong>
-                                    <p>Masculino</p>
-                                </div>
-                            </div>
-                            <div className="sort2">
-                                <strong>Nome do abrigo:</strong>
-                                <p>Nanda abrigo</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Email:</strong>
-                                <p>nandabrigo@abrigo.com</p>
-                            </div>
-                            <div className="sort2">
-                                <strong>Whatsapp:</strong>
-                                <p>81 947893</p>
-                            </div>
-                            <div className="sort">
-                                <div className="line">
-                                    <strong>Localidade:</strong>
-                                    <p>Recife</p>
-                                    <strong id="linha3">UF:</strong>
-                                    <p>PE</p>
-                                </div>
-                            </div>
-                            <button type="button" title="Editar">
-                                <FiEdit size={30} color="#a8a8b3" />
-                            </button>
-                            <button type="button" title="Apagar">
-                                <FiTrash2 size={30} color="#a8a8b3" />
-                            </button>
-                        </li>
-
-                    </ul>
-                </div>
+                    ))}
+                </ul>
             </div>
-        </body >
+        </div>
     );
 }
